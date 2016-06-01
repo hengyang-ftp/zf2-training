@@ -48,12 +48,11 @@
         <echo file="${project.basedir}/data/db/create.sql">
             CREATE DATABASE IF NOT EXISTS ${db.dbname};
         </echo>
-        <pdosqlexec url="mysql:host=${db.host}"
-                    userid="${db.username}"
-                    password="${db.password}">
+
+        <pdosqlexec url="mysql:host=${db.host}" userid="${db.username}" password="${db.password}">
             <transaction src="${project.basedir}/data/db/create.sql"/>
         </pdosqlexec>
-        
+
         <delete dir="${project.basedir}/data/db" quiet="true"/>
     </target>
 
