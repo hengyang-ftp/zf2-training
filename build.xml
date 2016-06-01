@@ -18,7 +18,7 @@
         </then>
         <else>
             <!-- Sinon, création de la stack avec le nom de base de la stack -->
-            <property name="cf.filteredStackName" location="${cf.stackName}"/>
+            <property name="cf.filteredStackName" value="${cf.stackName}"/>
         </else>
     </if>
 	
