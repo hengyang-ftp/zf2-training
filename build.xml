@@ -8,7 +8,20 @@
        </then>
    </if>
    <property file="${project.basedir}/build.properties" />
-   
+	<if>
+        <!-- Si la variable PR est définie -->
+        <isset property="continuousphp.pr" />
+        <then>
+            <echo message="Switching to PR stack" />
+            <!-- Création de la stack avec le nom de la stack de base + l'id de la PR -->
+            <property name="cf.filteredStackName" value="${cf.stackName}-${continuousphp.pr}"/>
+        </then>
+        <else>
+            <!-- Sinon, création de la stack avec le nom de base de la stack -->
+            <property name="cf.filteredStackName" location="${cf.stackName}"/>
+        </else>
+    </if>
+	
    <target name="help" description="List available targets">
        <exec executable="vendor/bin/phing"
              passthru="true">
