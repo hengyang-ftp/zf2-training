@@ -8,7 +8,6 @@
 
 namespace ApplicationTest\Validator;
 
-
 use Application\Validator\EmailAddress;
 
 class EmailAddressTest extends \PHPUnit_Framework_TestCase

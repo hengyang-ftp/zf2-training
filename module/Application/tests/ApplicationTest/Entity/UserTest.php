@@ -1,6 +1,7 @@
 <?php
 
 namespace ApplicationTest\Entity;
+
 use Application\Entity\User;
 
 /**

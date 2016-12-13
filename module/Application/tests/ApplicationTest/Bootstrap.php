@@ -92,7 +92,6 @@ class Bootstrap
             }
 
             include $zf2Path . '/Zend/Loader/AutoloaderFactory.php';
-
         }
 
         AutoloaderFactory::factory(array(
@@ -103,7 +102,6 @@ class Bootstrap
                 )
             )
         ));
-
     }
 
     protected static function findParentPath($path)
